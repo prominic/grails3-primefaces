@@ -10,10 +10,10 @@ This plugin has not yet been submitted to the Grails repository.  For now you wi
 
 Then add this dependency to your project:
 ```
-    compile "net.prominic.grails.plugins:grails3-primefaces:0.1"
+    compile "net.prominic.grails.plugins:grails3-primefaces:0.2"
 ```
 
-You can see an example project and some demo instructions in [this project](TODO)
+You can see an example project and some demo instructions in [this project](https://github.com/prominic/grails3-primefaces-demo)
 
 ## Dependencies
 
