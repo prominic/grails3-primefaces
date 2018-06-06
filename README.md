@@ -57,7 +57,7 @@ You can then define .xhtml files to reference these beans in:
 
 ## License
 
-Moonshine-IDE is licensed under the Apache License 2.0 - see the [LICENSE.md](TODO) file for details
+Moonshine-IDE is licensed under the Apache License 2.0 - see the [LICENSE.md](https://github.com/prominic/grails3-primefaces/blob/master/LICENSE.MD) file for details
 
 ## Acknowledgments
 
