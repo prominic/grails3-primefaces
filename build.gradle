@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-version "0.2"
+version "0.2.1"
 group "net.prominic.grails.plugins"
 
 apply plugin:"eclipse"
@@ -32,7 +32,7 @@ dependencies {
    // compile "org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE"
     compile "org.grails:grails-core"
     compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-tomcat"
+    provided "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.grails:grails-web-boot"
     compile "org.grails:grails-logging"
     compile "org.grails:grails-plugin-rest"
@@ -42,7 +42,7 @@ dependencies {
     compile "org.grails:grails-plugin-url-mappings"
     compile "org.grails:grails-plugin-interceptors"
     compile "org.grails.plugins:cache"
-    compile "org.grails.plugins:async"
+    compile "org.grails.plugins:async:3.3.3.BUILD-SNAPSHOT"
     compile "org.grails.plugins:scaffolding"
     compile "org.grails.plugins:gsp"
     console "org.grails:grails-console"
