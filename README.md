@@ -13,6 +13,52 @@ Then add this dependency to your project:
     compile "net.prominic.grails.plugins:grails3-primefaces:0.2"
 ```
 
+To run with the default Tomcat container, you will also need to add these WEB-INF files:
+
+#### src/main/webapp/WEB-INF/faces-config.xml:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+    <!-- required for grails3-primefaces plugin -->
+    <application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+
+</faces-config>
+
+```
+
+#### src/main/webapp/WEB-INF/faces-config.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+         metadata-complete="true"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+
+    <!-- Required for grails3-primefaces plugin -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.faces</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
+```
+
 You can see an example project and some demo instructions in [this project](https://github.com/prominic/grails3-primefaces-demo)
 
 ## Dependencies
