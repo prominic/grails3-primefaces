@@ -33,7 +33,7 @@ To run with the default Tomcat container, you will also need to add these WEB-IN
 
 ```
 
-#### src/main/webapp/WEB-INF/faces-config.xml
+#### src/main/webapp/WEB-INF/web.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0"
